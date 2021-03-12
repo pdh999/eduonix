@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      font: normal 14px sans-serif;
+    }
+    ul {
+      padding: 10px;
+      background-color:rgb(226, 93, 155);
+    }
+    li {
+      color: white;
+      padding: .5em;
+      list-style: none;
+      border: 1px solid white;
+      border-radius: 3px;
+      margin-bottom: 5px;
+    }
+    li:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+
+  <script>
+const inventory = [
+{
+    "id":{"$oid":"60461f6efc13ae2ea6000000"},
+    "animal":"Painted stork",
+    "scientific name":"Mycteria leucocephala",
+    "amount":9,
+    "location":"Philadelphia"
+    },
+    {
+    "id":{"$oid":"60461f6efc13ae2ea6000001"},
+    "animal":"Barbet, levaillant's",
+    "scientific name":"Trachyphonus vaillantii",
+    "amount":46,
+    "location":"Velikooktyabr’skiy"
+    },
+    {
+    "id":{"$oid":"60461f6efc13ae2ea6000002"},
+    "animal":"Oryx, fringe-eared",
+    "scientific name":"Oryx gazella callotis",
+    "amount":56,
+    "location":"Registro"
+    },
+    {"id":{"$oid":"60461f6efc13ae2ea6000003"},
+    "animal":"Gila monster",
+    "scientific name":"Heloderma horridum",
+    "amount":8,
+    "location":"Trashigang"
+    },
+    {"id":{"$oid":"60461f6efc13ae2ea6000004"},
+    "animal":"Dove, laughing",
+    "scientific name":"Streptopelia senegalensis",
+    "amount":3,
+    "location":"Seattle"
+    },
+    {"id":{"$oid":"60461f6efc13ae2ea6000005"},
+    "animal":"Malagasy ground boa",
+    "scientific name":"Acrantophis madagascariensis",
+    "amount":12,
+    "location":"Yako"
+    },
+    {
+    "id":{"$oid":"60461f6efc13ae2ea6000006"},
+    "animal":"Dunnart, fat-tailed",
+    "scientific name":"Smithopsis crassicaudata",
+    "amount":23,
+    "location":"Arvidsjaur"
+    },
+    {
+    "id":{"$oid":"60461f6efc13ae2ea6000007"},
+    "animal":"Otter, african clawless",
+    "scientific name":"Aonyx capensis",
+    "amount":71,
+    "location":"Zhize"
+    }
+]
+ 
+      const zooAnimalElements = inventory.map((animal) => {
+      const zooAnimalElement = document.createElement("div");
+      const attributeList = document.createElement("ul");
+      const animalElement = document.createElement("li");
+      const idElement = document.createElement("li");
+      const scientificNameElement = document.createElement("li");
+      const amountElement = document.createElement("li");
+      const locationElement = document.createElement("li");
+      
+      idElement.innerText = `Animal Name: ${animal.id}`;
+      animalElement.innerText = `Animal Name: ${animal.animal}`;
+      scientificNameElement.innerText = `Scientific Name: ${animal.scientificName}`;
+      amountElement.innerText = `Amount: ${animal.amount}`;
+      locationElement.innerText = `Location: ${animal.location}`;
+
+      zooAnimalElement.appendChild(attributeList);
+      attributeList.appendChild(idElement);
+      attributeList.appendChild(animalElement);
+      attributeList.appendChild(scientificNameElement);
+      attributeList.appendChild(amountElement);
+      attributeList.appendChild(locationElement);
+
+      return zooAnimalElement
+
+  })
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const container = document.querySelector('.container');
+    zooAnimalElements.forEach((val) => container.appendChild(val))
+  })
+  </script>
+</head>
+<body>
+  <div class="container"></div>
+</body>
+</html>
