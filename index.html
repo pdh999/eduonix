@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome to Library System</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+
+    <div id="message"></div>
+
+    <div class="container">
+        <h1>Library System</h1>
+        <hr>
+        <form id="libraryForm">
+            <div class="form-group row">
+                <label for="bookName" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="bookName" placeholder="Book Name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="Author" class="col-sm-2 col-form-label">Author</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="author" placeholder="Author">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="Branch" class="col-sm-2 col-form-label">Branch</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="branch" placeholder="Branch">
+                </div>
+            </div> 
+            <div class="form-group row">
+                <label for="Branch" class="col-sm-2 col-form-label">Publisher</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="publisher" placeholder="Publisher">
+                </div>
+            </div> 
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Type</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" id="ukHistory" value="UK History">
+                            <label class="form-check-label" for="ukHistory">
+                                UK History
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" id="programming" value="Programming">
+                            <label class="form-check-label" for="programming">
+                                Computer Programming
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" id="science" value="Science">
+                            <label class="form-check-label" for="science">
+                                Science
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" id="classics" value="Classics">
+                            <label class="form-check-label" for="classics">
+                                Classics
+                            </label>
+                        </div>
+                        <div class="form-check disabled">
+                            <input class="form-check-input" type="radio" name="type" id="reference" value="Reference">
+                            <label class="form-check-label" for="reference">
+                                Reference
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Add Book</button>
+                </div>
+            </div>
+        </form>
+
+        <div id="table">
+            <h1>Your books</h1>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">Branch</th>
+                        <th scope="col">Publisher</th>
+                        <th scope="col">Type</th>
+                    </tr>
+                </thead>
+                <tbody id='tableBody'></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    
+
+</body>
+
+</html>

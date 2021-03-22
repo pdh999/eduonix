@@ -1,0 +1,18 @@
+body {
+    font: normal 14px sans-serif;
+  }
+  ul {
+    padding: 10px;
+    background-color:rgb(226, 93, 155);
+  }
+  li {
+    color: white;
+    padding: .5em;
+    list-style: none;
+    border: 1px solid white;
+    border-radius: 3px;
+    margin-bottom: 5px;
+  }
+  li:last-child {
+    margin-bottom: 0;
+  }
